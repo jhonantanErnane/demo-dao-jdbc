@@ -12,9 +12,14 @@ public class Program2 {
 		Scanner sc = new Scanner(System.in);
 
 		DepartmentDao depDao = DaoFactory.createDepartmentDao();
-		System.out.println("=== TEST 1: seller findById ====");
+		System.out.println("=== TEST 1: Department findById ====");
 		Department dep = depDao.findById(2);
 		System.out.println(dep);
+		
+		System.out.println("\n=== TEST 2: Department findAll ====");
+		var listDep = depDao.findAll();
+		listDep.forEach(System.out::println);
+		
 		
 		sc.close();
 	}
