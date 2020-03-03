@@ -20,6 +20,12 @@ public class Program2 {
 		var listDep = depDao.findAll();
 		listDep.forEach(System.out::println);
 		
+		System.out.println("\n=== TEST 3: Department insert ====");
+		var depTeste = new Department(null, "Fake");
+		depDao.insert(depTeste);
+		System.out.println(depTeste);
+
+		
 		
 		sc.close();
 	}
